@@ -10,6 +10,7 @@ loadPage()
 
 
 
+
 // const loadPage = function () {
 //     renderer.render(manager.threeMessages)
 //     manager.getNextThree()
