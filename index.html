@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="home">
+        Welcome to the TICKER!
+    </div>
+
+    <div id="container">
+        <div id="messages">
+        
+        </div>
+    </div>
+    <!-- ----------------------------------------------------->
+    <script id="message-template" type="text/x-handlebars-template">
+        {{#each messagesArr}}
+        <div class="message" data-id="{{id}}">
+            <img src="{{pic}}">
+            <div class="name">{{name}}</div>
+            <div class="date">{{date}}</div>
+            <div class="text">{{text}}</div>
+        </div>
+        {{/each}}
+    </script>
+    <!-- ----------------------------------------------------->
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="Manager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

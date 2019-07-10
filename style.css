@@ -1,0 +1,86 @@
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#home{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+ @keyframes tickerv {
+    0% {transform: translateY(0)}
+    10% {transform: translateY(-140px)}
+    20% {transform: translateY(-280px)}
+    30% {transform: translateY(-420px)}
+    40% {transform: translateY(-560px)}
+    50% {transform: translateY(-700px)}
+    60% {transform: translateY(-840px)}
+    70% {transform: translateY(-980px)}
+    80% {transform: translateY(-1120px)}
+    90% {transform: translateY(-1260px)}
+    100% {transform: translateY(0)}
+  }
+
+#container{
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 50vw;
+    height: 400px;;
+    margin-left: 25%;
+
+    box-sizing: content-box;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#messages{
+    animation-name: tickerv;
+    animation-duration:15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0.5, 0.5, 1);
+}
+
+.message{
+    display: grid;
+    grid-template-areas: 
+    "p n ."
+    "p d ."
+    "t t t";
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 8fr;
+    background-image: url("post_bg.png");
+    margin-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+
+}
+
+.name{
+    grid-area: n;
+    font-size: 150%;
+}
+
+img{
+    grid-area: p;
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+}
+
+.date{
+    grid-area: d;
+    font-size: 70%;
+    color: red;
+}
+
+.text{
+    grid-area: t;
+    padding-top: 1%;
+}
